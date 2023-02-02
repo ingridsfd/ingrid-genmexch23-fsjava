@@ -1,0 +1,62 @@
+<!--Formulario de viaje con mínimo 5 inputs diferente-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Viajes</title>
+    <link rel="stylesheet" href="formulario-viaje.css">
+</head>
+
+<body>
+    <br>
+    <h2>Selecciona las fechas de tu viaje, por favor:</h2>
+    <form>
+        Fecha de ida:
+        <input type="date" name="bday" min="2022-12-31"><br>
+        Fecha vuelta:
+        <input type="date" name="bday" max="2030-01-02"><br>
+    </form><!--Se puede añadir los atributos min y max para restringir la selección.-->
+    <br>
+    <form>
+        Cantidad de viajeros:
+        <input type="number" name="quantity" min="1" max="6">
+    </form>
+    <br>
+    <h2>Datos del viajero:</h2>
+    <form action="/action_page.php">
+        Nombre:<br>
+        <input type="text" name="firstname"><br>
+        Apellidos:<br>
+        <input type="text" name="lastname"><br>
+        Correo:<br>
+        <input type="text" name="correo"><br>
+        Teléfono:
+        <br>
+        <input type="text" name="telefono"><br>
+        <br>
+        <input type="submit" value="Enviar">
+    </form><!--Un botón que envía el formulario.-->
+    <br>
+    <h2>Tipo de viaje:</h2>
+    <select name="select">
+        <option>Sencillo</option>
+        <option>Completo</option>
+    </select>
+    <br>
+    <br>
+    <h3>Edad del viajero</h3>
+    <input type="checkbox" name="sencillo" value="sencillo"> Menor de 15 años
+    <input type="checkbox" name="sencillo" value="sencillo"> 15-21 años
+    <input type="checkbox" name="completo" value="completo"> 21-30 años
+    <input type="checkbox" name="sencillo" value="sencillo"> Mayor de 60 años
+    <br>
+    <h3>Le gustaría recibir nuestras promociones y descuentos a su correo electrónico?</h3>
+    <input type="radio" Name="gender" Value="male">Sí
+    <input type="radio" Name="gender" Value="female">No
+    <br>
+</body>
+
+</html>
