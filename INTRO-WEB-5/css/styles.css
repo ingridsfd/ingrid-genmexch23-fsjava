@@ -1,5 +1,5 @@
 body{
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+     font-family: 'Segoe UI', /*The font-family CSS property specifies a prioritized list of one or more font family names and/or generic family names for the selected element.*/Tahoma, Geneva, Verdana, sans-serif; 
     font-size: 12px;
     font-weight: lighter;
     color: #497174;
@@ -39,7 +39,7 @@ h1 span{
 }
 
 .container{
-    max-width: 800px;
+    max-width: 900px;
     background: #D6E4E5;
     margin-top: 80px;
     margin-left: auto;
@@ -47,23 +47,110 @@ h1 span{
     margin-bottom: 30px;
 }
 
-.menu ul li{
+.menu ul {
     text-align: center;
     margin: auto;
     padding: 0%;
     list-style-type: none;
+    /*El tipo de estilo de lista especifica la apariencia del listado.*/
 }
 
-.menu ul li{
+.menu ul li {
     display: inline-block;
     position: relative;
 }
+/*¿Qué hace el display? La propiedad CSS display especifica 
+si un elemento es tratado como block or inline element y el 
+diseño usado por sus hijos, como flow layout(Diseño de Flujo),
+grid(Cuadricula) o flex(Flexible).*/
 
-.menu ul li a{
+/*¿Qué es la position relative? Un elemento posicionado relativamente 
+es un elemento cuyo valor computado de position es relative. 
+Las propiedades top y bottom especifican el desplazamiento vertical desde 
+su posición original;
+las propiedades left y right especifican su desplazamiento horizontal.*/
+
+.menu ul li a {
     background: black;
     color: white;
     font-size: 10px;
     text-decoration: none;
     display: block;
-    padding: 3px;
+    padding: 5px;
+}
+/* La propiedad position de CSS especifica cómo un elemento es posicionado 
+en el documento. Las propiedades top, right, bottom, y left 
+determinan la ubicación final de los elementos posicionados.*/
+
+.menu ul li ul {
+    position: absolute;
+    top: 25px;
+    left: 0; 
+    list-style-type: none;
+    display: none;
+    height: auto;
+}
+/*Aquí vimos la propiedad position*/
+/*La propiedad top especifica parte de la posición de un elemento posicionado.
+No tiene efecto en elementos no posicionados. Para los elementos con una 
+posición absoluta (aquellos que tienen la propiedad position: absolute o 
+position: fixed), determina la distancia entre el borde superior del 
+elemento y el borde superior del bloque que lo contiene.*/
+
+
+.menu ul li:hover ul{
+    display: block;
+}
+/* Crea una propiedad para pasar el mouse y desplegar la información de los bloques*/
+
+.menu ul li ul li {
+    display: block;
+    width: 60px;
+    height: 20px;
+    margin: 0;
+    text-align: left;
+    font-size: 14px;
+}
+/* Dentro de los bloques creados, estas son las características para desplegar en las listas*/
+
+/* fin de header */ 
+
+h2 {
+    color:#EB6440;
+    text-transform: uppercase;
+}
+
+/*En CSS,
+::before crea un pseudoelemento que es el primer hijo del elemento 
+seleccionado. Es usado normalmente para añadir contenido estético a un 
+elemento, usando la propiedad content. Este elemento se muestra en línea 
+con el texto de forma predeterminada.*/
+
+h2::before {
+    /* ::before permite poner viñetas*/
+    content: "// ";
+}
+
+/*El hack clearfix La forma en que esta situación se ha tratado 
+tradicionalmente es utilizando algo conocido como "truco clearfix". 
+Esto implica insertar algún contenido generado después del cuadro que 
+contiene el contenido flotante y envolvente, y configurarlo para limpiar 
+ambos.*/
+
+.cleafix::before{
+    display: table;
+    line-height: 0;
+    content: "/";
+}
+
+.pull-left {
+    float:left; 
+}
+
+.row {
+    padding-left: 10px; 
+    padding-right: 10px; 
+}
+.col-60 {
+    width: 60%;
 }
