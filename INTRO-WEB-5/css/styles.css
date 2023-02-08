@@ -233,34 +233,100 @@ ambos.*/
 }
 
 /* S K I L L S*/
-.containerskills[data-percent="80"] {
-	width: 100%;
-	background-color: #ddd;
-}
-
 .skills {
-	text-align: right;
-	padding-top: 0;
-	padding-bottom: 10px;
-	color: white;
-}
+		list-style-type: none;
+		margin:0;
+		padding: 0;
+	}
+		.skills-item {				
+			color: #FFFFFF;
+			font-weight: bold;
+			text-transform: uppercase;
+			padding: 2px 0 2px 5px;
+			margin-top: 5px;				
+			background: #eb6440;
+			
+		}
+		.skills-item[data-percent="10"] { width: 10% }
+		.skills-item[data-percent="20"] { width: 20% }
+		.skills-item[data-percent="30"] { width: 30% }
+		.skills-item[data-percent="40"] { width: 40% }
+		.skills-item[data-percent="50"] { width: 50% }
+		.skills-item[data-percent="60"] { width: 60% }
+		.skills-item[data-percent="70"] { width: 70% }
+		.skills-item[data-percent="80"] { width: 80% }
+		.skills-item[data-percent="90"] { width: 90% }
+
+
 
 .html {
+	color: #DDDDDD;
+	margin: 3px;
+	list-style-type: none;
+	text-align: right;
 	width: 90%;
 	background-color: #04AA6D;
 }
 
 .css {
+	color: #DDDDDD;
+	margin: 3px;
+	list-style-type: none;
+	text-align: right;
 	width: 80%;
 	background-color: #2196F3;
 }
 
 .js {
+	color: #DDDDDD;
+	margin: 3px;
+	list-style-type: none;
+	text-align: right;
+	/*none;*/
 	width: 65%;
-	background-color: #f44336;
+	background-color: #eb6440;
 }
 
-.php {
+.python {
+	color: #DDDDDD;
+	margin: 3px;
+	list-style-type: none;
+	text-align: right;
 	width: 60%;
 	background-color: #808080;
+}
+
+/** fin de skills **/
+/* I M A G E N E S */
+.icon-start{
+	background: url(../imgs/star-grey.png)no-repeat;
+	width: 110px;
+	height: 14px;
+	float: right; /*hace que flote hacia la derecha*/
+}
+
+.icon-start-red{
+	background: url(../imgs/star-red.png)no-repeat;
+	width: 110px;
+	height: 14px;
+	float: left;
+}
+
+.obj-start{
+	margin-bottom: 5px;
+	padding-bottom: 5px;
+	border-bottom: 5px;
+}
+
+.hobby{
+	background: #eb6440;
+	color: white;
+	padding: 8px;
+	font-size: 0.6em;
+}
+
+footer p{
+	text-align: right;
+	font-size: 0.8em;
+	border-top: 1px solid;
 }

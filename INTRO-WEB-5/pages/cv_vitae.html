@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Curriculum Vitae: :Ingrid Fonoy</title>
     <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
 </head>
 
 <body>
@@ -69,7 +70,7 @@
                     </article>
                     <!--E D U C A T I O N-->
                     <article class="education">
-                        <h2 class="col-10">Educación</h2>
+                        <h2>Educación</h2>
                         <ul>
                             <li>
                                 <div class="pull-left col-10">
@@ -131,8 +132,8 @@
                     </article>
                 </div>
             </div>
-            <div>
-                <div>
+            <div class="col-40 pull-left">
+                <div class="row">
                     <!-- C O N T A C T O -->
                     <h2>Contacto</h2>
                     <ul>
@@ -143,16 +144,54 @@
                     </ul>
                     <!-- S K I L L S -->
                     <h2>Skills</h2>
-                    <ul>
-                        <li class="skills css" data-percent="80">css</li>
-                        <li>html</li>
-                        <li>javascript</li>
-                        <li>python</li>
+                    <!--<ul class="containerskil">
+                        <li class="skils html">html 90%</li>
+                        <li class="skills css">css 80%</li>
+                        <li class="skils js">js 65%</li>
+                        <li class="skils python">python 60%</li>
+                    </ul>-->
+                    <ul class="skills">
+                        <li class="skills-item" data-percent="90">Java</li>
+                        <li class="skills-item" data-percent="80">HTML</li>
+                        <li class="skills-item" data-percent="60">Css</li>
+                        <li class="skills-item" data-percent="40">Js</li>
+                        <li class="skills-item" data-percent="20">Python</li>
                     </ul>
+                    <!-- I D I O M A S -->
+                    <h2>Idiomas</h2>
+                    <div>
+                        <div>
+                            Ingles
+                            <div class="icon-start">
+                                <div class="icon-start-red" style="width: 95%;"></div>
+                            </div>
+                        </div>
+                        <div>
+                            Español
+                            <div class="icon-start">
+                                <div class="icon-start-red" style="width: 100%;"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--H O B B I E S-->
+                    <h2>Hobbies</h2>
+                    <!--Es un contenedor en línea. Sirve para aplicar estilo al 
+                    texto o agrupar elementos en línea.
+                    Sus etiquetas son: <span> y </span> (ambas obligatorias).
+                    Está definido como: Elemento especial, y por lo tanto en línea.
+                    Crea una caja: En línea. Puede contener: Texto, y/o Elementos en 
+                    línea.-->
+                    <span class="hobby"><i class="fa fa-heartbeat" aria-hidden="true"></i>Deporte</span>
+                    <span class="hobby"><i class="fa fa-camera-retro"></i>Fotografía</span>
+                    <span class="hobby"><i class="fa fa-camera-retro"></i>Música</span>
+                    <!--De la biblioteca de iconos Font Awesome. Si se agrega esta biblioteca, simplemente agregue la clase HTML css fa fa-heartbeat a cualquier elemento para agregar el icono. El icono de latido del corazón de Font Awesome se puede cambiar de tamaño según sus necesidades. Puede administrar el tamaño del ícono (fa fa heartbeat) usando el estilo css de tamaño de fuente.-->
                 </div>
             </div>
         </section>
         <footer>
+            <footer class="row clearfix">
+                <p>Desarrollo Frontend, Generation 2023</p>
+            </footer>
         </footer>
     </div>
 </body>
