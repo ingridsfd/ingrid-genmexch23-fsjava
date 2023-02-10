@@ -33,6 +33,7 @@ console.log( operacion( 3, 2, 2, 5 ) );
 function imc() {
     let peso = parseInt( prompt( "Cual es tu peso en Lb?" ) );
     let estatura = parseInt( prompt( "cual es tu estatura en Cm?" ) );
+    //Reescribrimos las variables
     peso = peso * 0.4535
     estatura = estatura / 100;
     let imc = peso / ( estatura ** 2 );
