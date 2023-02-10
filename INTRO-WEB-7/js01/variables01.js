@@ -54,4 +54,3 @@ function imc() {
         console.log( "Obesidad hipermórbida" );
     }
 }
-
