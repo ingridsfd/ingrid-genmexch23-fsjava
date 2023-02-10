@@ -29,7 +29,7 @@ function suma(a,b) {
 
 //RESTA
 function resta(c,d) {
-    let rest1 = d - c
+    let rest1 = c - d
     console.log( rest1 );
 }
 //MULTIPLICACIÓN
