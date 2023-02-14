@@ -20,7 +20,7 @@ let cspProgCalificacion = 76;
     if ( cspProgCalificacion >= 75 ) {
         console.log( "¡Eres elegible para la graduación!" );
     } else {
-        console.log( "Vas a repetir año, nimodo." )
+        console.log( "Vas a repetir bootcamp, nimodo." )
     };
 
 //Exercise 3
@@ -42,6 +42,23 @@ console.log(
     texto[ 6 ] + "." +
     texto[ 7 ] + "." +
     texto[ 8 ] + "." +
-    texto[ 9 ]
+    texto[ 9 ] 
 );
 
+//Exercise 3
+/*La posibilidad de acceder a cada caracter en una cadena 
+nos permite lograr efectos interesantes. En el siguiente ejercicio agrega puntos entre
+las letras de cada palabra, pero no entre las palabras*/
+
+//let texto = "Hola Mundo";
+//"H.o.l.a.M.u.n.d.o"
+
+let str = 'Hola Mundo';
+let mensaje = '';
+let texto1 = str.split('');
+
+for (let i = 0; i < texto1.length; i++) {
+    mensaje += texto1[ i ] + '.';
+}
+
+console.log( mensaje ); //H.o.l.a. M.u.n.d.o.
