@@ -1,11 +1,23 @@
+//Extra: se usan más caracteres y el método .toString();
+//en arrays se usa más Math.max();
+//en objetos se usa más Math.max();
+
 //Métodos arrays como objetos javascript:
 let lista = [ 12, 5, 80, 34, 7 ];
 
+let lNueva = lista.map(
+    function ( valor ) {
+        return valor * 2
+    } 
+);
+console.log( lNueva );
+
 lista.sort(
-    function ( valor1, valor2 ) {
-        return valor1 > valor2;
+    function ( a, b ) {
+        return b - a;
     }
 );
+//con un operador le pedimos que nos lo ordenara de menos a mayor
 console.log( lista );
 //va a tomar el valor que se está comparando 
 //return nos da una función para guardarlo y entregarlo después
