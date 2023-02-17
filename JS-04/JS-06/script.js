@@ -100,8 +100,86 @@ var input1 = document.getElementById( "input1" );
 var input2 = document.getElementById( "input2" );
 
 var botonSuma = document.getElementById( "botonSuma" );
-var botonSuma = document.getElementById( "botonResta" );
-var botonSuma = document.getElementById( "botonMultiplicacion" );
-var botonSuma = document.getElementById( "botonDivision" );
+var botonResta = document.getElementById( "botonResta" );
+var botonMultiplicacion = document.getElementById( "botonMultiplicacion" );
+var botonDivision = document.getElementById( "botonDivision" );
 
 var resultado = document.getElementById( "resultado" );
+
+//Construimos las funciones de nuestra calculadora
+function suma() {
+    let valor1 = parseInt(input1.value); //pido num1
+    let valor2 = parseInt( input2.value ); //pido num2
+    let suma = valor1 + valor2; //calculo la suma
+    resultado.innerHTML = suma; //pongo el resultado en su lugar
+}
+
+function resta() {
+    let valor3 = parseInt( input1.value ); //pido num1
+    let valor4 = parseInt( input2.value );
+    let resta = valor3 - valor4;
+    resultado.innerHTML = resta;
+}
+
+function multiplicacion() {
+    let valor5 = parseInt( input1.value );
+    let valor6 = parseInt( input2.value );
+    let multiplicacion = valor5 * valor6;
+    resultado.innerHTML = multiplicacion;
+}
+
+function division() {
+    let valor7 = parseInt( input1.value );
+    let valor8 = parseInt( input2.value );
+    let divison = valor7 / valor8;
+    resultado.innerHTML = divison;
+}
+
+/*cómo se crea un evento(addEventListener)
+    - node.addEventListener("evento a escuchar", lo que quiero que haga cuando se escuche)
+    - addEventListener (palabra reservada para usar el evento)
+    - evento escuchar (click, mouseover, etc.)
+    - lo que quiero que haga (la llamada de la función)
+*/
+
+botonSuma.addEventListener( "click", suma );
+botonResta.addEventListener( "click", resta );
+botonMultiplicacion.addEventListener( "click", multiplicacion );
+botonDivision.addEventListener( "click", division );
+
+
+/* Manipulación del DOM
+    - Métodos para acceder a elementos
+        //ul - lista no organizada
+        // li - es la lista
+    - Métodos para crear elementos
+        - document.createElement(etiqueta)
+        - document.createTextNode(texto) - Investigar 
+            - 
+
+    - Métodos para insertar elementos
+        - parentElemento.append.
+        - parentElement.insertBefore
+        - parentElement.insertAdjacentElement
+
+    - Métodos para modificar elementos
+        - node.outerHTML (Leer o referenciar el elemento)
+        - node.innerHTML (modificar el elemento)
+
+*/
+
+/*Eventos 
+Función que se ejecuta en tiempo y forma
+Investigar eventos de HTML
+onclick, onmouseover, on...
+Modularización = tener todo dividido
+
+*/
+
+//Primer paso: Definir con que voy a interactuar (almaceno en una variable)
+const textoAModificar = document.querySelector("#h1")
+
+//Creo una funcion que cambia de color, segun el color que le paso como parametro
+function cambiarColor(color){
+    textoAModificar.style.color = color;
+}
