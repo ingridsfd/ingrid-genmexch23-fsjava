@@ -21,7 +21,7 @@ class operacionesAritmeticas{
 
 let obj4 = new operacionesAritmeticas( 8, 6 );
 console.log( obj4.sumar() );
-
+//crear objeto, llamar objeto = esto es la instancia;
 
 
 let obj3 = new operacionesAritmeticas();
@@ -33,9 +33,11 @@ let obj2 = new operacionesAritmeticas();
 console.log( obj2.sumar( 5, 6 ) );
 
 
-let obj1; //instance
-obj1 = new operacionesAritmeticas(); //instance
-console.log( obj1.numero0 ); //function call
+let obj1; //instance; declaración
+obj1 = new operacionesAritmeticas(); //instance, creación
+console.log( obj1.numero0 ); //function call, llamado
 
 //constructor es un método: permite inicializar los atributos
 //función que me va a permitir a crear los miembros de datos
+
+//orientación a objetos para hacer diseño, no sólo programación
