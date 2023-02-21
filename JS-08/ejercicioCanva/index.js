@@ -1,4 +1,14 @@
-const avivinar = document.querySelector(".adivina");
+/*Pseudocodigo
+
+1. Método para comprobar si el valor es un número
+2. Método para solicitar un número al usuario con prompt
+3. Método para verificar que mientras el valor introducido no sea un número o no esté entre 1 y 100, sigue solicitando el núm
+4. Condición para comprobar si el número que dio el usuario es correcto o no
+5. Método para comenzar el juego
+6. Hacemos instancia y llamamos
+*/
+
+const avivinar = document.querySelector( ".adivina" );
 const avivinar1 = document.querySelector(".adivina1");
 
 class JuegoAdivinarNumero {
