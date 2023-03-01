@@ -3,7 +3,8 @@ package control;
 import java.util.Scanner;
 
 public class EstructuraMultiple {
-	Scanner dato = new Scanner(System.in);
+	Scanner dato = new Scanner(System.in); //la buena práctica es ponerlo de forma global en su scope
+	
 	public void vocal() {
 		// TODO Auto-generated method stub
 		System.out.println("Introduzca letra: ");
@@ -22,5 +23,48 @@ public class EstructuraMultiple {
 			System.out.println("El caracter no es vocal");
 			break;
 		}
+	}
+	
+	public void notas() {
+		// TODO Auto-generated method stub
+		System.out.println("Introduzca letra: ");
+		int nota = dato.nextInt();
+		switch (nota) {
+		case 10: System.out.println("Excelente"); break;
+		case 9: System.out.println("Muy bien"); break;
+		case 8: System.out.println("Bueno"); break;
+		case 7:	System.out.println("Regular"); break;
+		case 6: System.out.println("Deficiente"); break;
+		case 5: 
+		case 4:
+		case 3:
+		case 2:
+		case 1:
+		case 0: System.out.println("Reprobado");
+			
+			break;
+
+		default:
+			System.out.println("Fuera de rango");
+			break;
+		}
+		
+	}
+	
+	/*
+	 *  ?: Operador Elvis
+	 *  variable = (PL) ? entrada verdad : entrada falso
+	 */
+	
+	public void ternario() 
+	{
+		// TODO Auto-generated method stub
+		System.out.println("Introduzca un valor primer numérico: ");
+		int entradaV = dato.nextInt();
+		System.out.println("Introduzca un segundo valor numérico: ");
+		int entradaF = dato.nextInt();
+		
+		int menor = (entradaV <= entradaF) ? entradaV : entradaF;
+		System.out.println("----> " + menor);
 	}
 }
