@@ -3,7 +3,8 @@ package com.isfd.clases;
 public class AlumnoB extends PersonaP {
 private int matriculas;
 private double promedio;
-public AlumnoB(int matriculas, double promedio) {
+public AlumnoB(int matriculas, double promedio, String nombre, int edad) {
+	super(nombre, edad);
     this.matriculas = matriculas;
     this.promedio = promedio;
 }
@@ -22,5 +23,10 @@ public void setPromedio(double promedio) {
 @Override
 public String toString() {
     return "AlumnoB [matriculas=" + matriculas + ", promedio=" + promedio + "]";
+}
+
+public void mostrarDatos(String apellido) {
+	System.out.println(this.getNombre()+" "+ apellido +" "+this.getEdad()+" "+this.matriculas+" "+this.promedio);
+
 }
 }
