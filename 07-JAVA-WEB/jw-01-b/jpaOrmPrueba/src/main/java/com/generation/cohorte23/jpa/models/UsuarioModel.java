@@ -1,21 +1,48 @@
 package com.generation.cohorte23.jpa.models;
+
+import java.util.ArrayList;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name = "usuario")
+@Table (name="usuario")
 public class UsuarioModel {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(unique = true, nullable = false)
+    @GeneratedValue(strategy=GenerationType.IDENTITY)
+    @Column(unique=true, nullable=false)
     private Long id;
     private String nombre;
     private String email;
     private Integer prioridad;
+    
+    @OneToMany(mappedBy="usuario")//es un usuario con muchos productos
+    private ArrayList<ProductoModelo> productos;
+    
+    @OneToMany(mappedBy="usuario")//es un usuario con muchos productos
+    private ArrayList<OrdenModelo> orden;
+
+
+	public UsuarioModel() {
+    }
+    
+    
+    public UsuarioModel(Long id, String nombre, String email, Integer prioridad, ArrayList<ProductoModelo> productos) {
+        super();
+        this.id = id;
+        this.nombre = nombre;
+        this.email = email;
+        this.prioridad = prioridad;
+        this.productos = productos;
+        
+    }
+
+
     public Long getId() {
         return id;
     }
@@ -40,5 +67,23 @@ public class UsuarioModel {
     public void setPrioridad(Integer prioridad) {
         this.prioridad = prioridad;
     }
+
+    public ArrayList<ProductoModelo> getProductos() {
+        return productos;
+    }
+
+    public void setProductos(ArrayList<ProductoModelo> productos) {
+        this.productos = productos;
+    }
+
+    public ArrayList<OrdenModelo> getOrden() {
+		return orden;
+	}
+
+
+	public void setOrden(ArrayList<OrdenModelo> orden) {
+		this.orden = orden;
+	}
+
     
 }
