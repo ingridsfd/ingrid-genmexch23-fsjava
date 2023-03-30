@@ -1,6 +1,22 @@
 package com.generation.ecommerce.model;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+
+@Entity //indico que mi clase Producto se convierte en una entidad JPA (persistencia de datos)
+@Table(name = "Producto") // especificar de forma correcta el nombre de la tabla
+
 public class Producto {
+	
+	@Id//el campo id es la primary key
+    @GeneratedValue(strategy = GenerationType.IDENTITY) //el campo id sera generado automaticamente por la DB
+    @Column(name="id", unique = true, nullable = false) //especifica el nombre de la columna en la DB
+	
 	//Atributos
     private Long id;
     private String nombre;
@@ -52,15 +68,11 @@ public class Producto {
 	public void setPrecio(double precio) {
 		this.precio = precio;
 	}
-	
+	//Es el toString para que nos imprima la info del producto
 	@Override
 	public String toString() {
 		return "Producto [id=" + id + ", nombre=" + nombre + ", descripcion=" + descripcion + ", URL_Imagen="
 				+ URL_Imagen + ", precio=" + precio + "]";
 	}
-	
-    
-    
-    
-    
+
 }
