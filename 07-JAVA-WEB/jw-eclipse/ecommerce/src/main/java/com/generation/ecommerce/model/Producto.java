@@ -22,14 +22,14 @@ public class Producto {
     private String nombre;
     private String descripcion;
     private String URL_Imagen;
-    private double precio;
+    private Double precio;
     
     //Constructor vacio para el Jackson(serializar y desrealizar un objeto Java a JSON)
     public Producto() {
 		super();
 	}
     //Constructor con todos los campos
-	public Producto(Long id, String nombre, String descripcion, String URL_Imagen, double precio) {
+	public Producto(Long id, String nombre, String descripcion, String URL_Imagen, Double precio) {
 		super();
 		this.id = id;
 		this.nombre = nombre;

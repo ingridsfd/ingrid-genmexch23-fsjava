@@ -1,5 +1,4 @@
 package com.example.blumen.services;
-
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,20 +16,24 @@ public class UsuarioTieneDireccionService {
     @Autowired
     UsuarioTieneDireccionRepo usuarioTieneDireccionRepo;
     
-    public boolean eliminarUsuario(Long id) {
-    	try {
-    		usuarioTieneDireccionRepo.deleteById(id);
-        	return true; 
-		} catch (Exception e) {
-			return false;
-		}
+    //Post
+    
+    public UsuarioTieneDireccionModel guardarPorId(UsuarioTieneDireccionModel id) { 
+		return usuarioTieneDireccionRepo.save(id);
     }
     
-    public UsuarioTieneDireccionModel guardarUsuario(UsuarioTieneDireccionModel usuario) {
-        return usuarioTieneDireccionRepo.save(usuario);
-    }
-     
+    //Get
      public Optional<UsuarioTieneDireccionModel> obtenerPorId (Long id){
          return usuarioTieneDireccionRepo.findById(id);
+     }
+     
+     //Delete
+     public boolean eliminarPorId(Long id) {
+     	try {
+     		usuarioTieneDireccionRepo.deleteById(id);
+         	return true; 
+ 		} catch (Exception e) {
+ 			return false;
+ 		}
      }
 }

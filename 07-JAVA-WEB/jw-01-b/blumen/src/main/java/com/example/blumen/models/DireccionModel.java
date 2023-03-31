@@ -1,13 +1,10 @@
 package com.example.blumen.models;
 
-import java.util.ArrayList;
-
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-import jakarta.persistence.OneToMany;
 import jakarta.persistence.OneToOne;
 import jakarta.persistence.Table;
 
@@ -27,20 +24,21 @@ public class DireccionModel {
     private String codigoPostal;
     private String referencia;
     
-    @OneToOne(mappedBy = "direccion")
-    private UsuarioTieneDireccionModel utdm;
+    @OneToOne(mappedBy = "usuarios_tienen_direcciones")
+    private UsuarioTieneDireccionModel utd;
     
 	public DireccionModel() {
 	}
 
 	public DireccionModel(Long id, String calle, String numInterior, String numExterior, String codigoPostal,
-			String referencia) {
+			String referencia, UsuarioTieneDireccionModel utd) {
 		this.id = id;
 		this.calle = calle;
 		this.numInterior = numInterior;
 		this.numExterior = numExterior;
 		this.codigoPostal = codigoPostal;
 		this.referencia = referencia;
+		this.utd = utd;
 	}
 
 	public Long getId() {
@@ -90,4 +88,14 @@ public class DireccionModel {
 	public void setReferencia(String referencia) {
 		this.referencia = referencia;
 	}
+
+	public UsuarioTieneDireccionModel getUtd() {
+		return utd;
+	}
+
+	public void setUtd(UsuarioTieneDireccionModel utd) {
+		this.utd = utd;
+	}
+	
+	
 }
